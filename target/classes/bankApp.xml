@@ -1,0 +1,22 @@
+<beans  
+   xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd"> 
+    
+    
+    <bean id="custObj" class="model.BankCustomer"></bean>
+    
+    <bean id="empObj" class="model.BankEmployee"></bean>
+    
+    <bean id="bankObj1" class="model.Bank">
+    <property name="service" ref="custObj"></property></bean>
+    
+    
+    <bean id="bankObj2" class="model.Bank">
+    <property name="service" ref="empObj"></property></bean>
+    
+    </beans>
